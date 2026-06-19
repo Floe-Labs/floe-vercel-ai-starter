@@ -86,6 +86,14 @@ This starter ships the **local** floe-guard. Be clear about what that means:
 | `FLOE_BUDGET_USD` | no | `1.00` | Local spend ceiling in USD. |
 | `FLOE_API_KEY` | no | — | Read-only hosted budget tightening. |
 
+## Floe governed-agent starters
+
+One of three clonable templates that ship Floe spend-governance by default:
+
+- [floe-vercel-ai-starter](https://github.com/Floe-Labs/floe-vercel-ai-starter) — Vercel AI SDK agent, deploy to Vercel (you are here)
+- [floe-crewai-starter](https://github.com/Floe-Labs/floe-crewai-starter) — CrewAI crew, run on Replit
+- [eve-floe](https://github.com/Floe-Labs/eve-floe) — Vercel Eve agent with per-subagent budgets
+
 ## License
 
 MIT — see [LICENSE](./LICENSE).
