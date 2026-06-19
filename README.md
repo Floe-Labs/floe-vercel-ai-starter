@@ -40,7 +40,7 @@ floe-guard's `budgetGuardMiddleware` — fully offline.
 
 1. Add your OpenAI key (copy `.env.example` to `.env.local`):
 
-   ```
+   ```bash
    OPENAI_API_KEY=sk-...
    ```
 

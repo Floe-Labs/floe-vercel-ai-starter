@@ -77,10 +77,20 @@ async function fetchHostedRemainingUsd(): Promise<number | null> {
   }
 }
 
-/** Parse a USDC base-unit string into USD, or null if it isn't valid. */
+/**
+ * Parse a USDC base-unit string into USD, or null if it isn't valid.
+ *
+ * Parses via BigInt: base-unit integer strings can exceed Number.MAX_SAFE_INTEGER,
+ * and Number() would silently lose precision. Reject above the safe-integer
+ * boundary rather than return a rounded value.
+ */
 function parseUsdc(value: unknown): number | null {
-  if (typeof value !== "string") return null;
-  const n = Number(value);
-  if (!Number.isFinite(n) || n < 0) return null;
-  return n / USDC_DECIMALS;
+  if (typeof value !== "string" || !/^\d+$/.test(value)) return null;
+  try {
+    const baseUnits = BigInt(value);
+    if (baseUnits > BigInt(Number.MAX_SAFE_INTEGER)) return null;
+    return Number(baseUnits) / USDC_DECIMALS;
+  } catch {
+    return null;
+  }
 }

@@ -39,6 +39,26 @@ export async function POST(req: Request) {
         { status: 400 },
       );
     }
+    // Validate shape at the boundary so malformed payloads fail as a 400 here,
+    // not as a 500 inside streamText. Each message needs a string `role` and
+    // present `content` (a string or the array form for multi-part content).
+    const allValid = body.messages.every(
+      (m) =>
+        typeof m === "object" &&
+        m !== null &&
+        typeof (m as { role?: unknown }).role === "string" &&
+        (typeof (m as { content?: unknown }).content === "string" ||
+          Array.isArray((m as { content?: unknown }).content)),
+    );
+    if (!allValid) {
+      return Response.json(
+        {
+          error: "bad_request",
+          detail: "Each message needs a string `role` and `content` (string or array).",
+        },
+        { status: 400 },
+      );
+    }
     messages = body.messages;
   } catch {
     return Response.json(

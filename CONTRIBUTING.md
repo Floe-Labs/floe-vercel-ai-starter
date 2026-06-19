@@ -14,7 +14,7 @@ Contributions are welcome.
 git clone https://github.com/Floe-Labs/floe-vercel-ai-starter.git
 cd floe-vercel-ai-starter
 npm install
-cp .env.example .env          # add OPENAI_API_KEY for live chat (optional for the demo)
+cp .env.example .env.local    # add OPENAI_API_KEY for live chat (optional for the demo)
 ```
 
 Run the checks before opening a PR:

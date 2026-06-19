@@ -42,7 +42,7 @@ export default function Home() {
         At 3 AM a runaway loop dies at your ceiling — not at $4,000.
       </p>
 
-      <button className="button" onClick={runDemo} disabled={loading}>
+      <button type="button" className="button" onClick={runDemo} disabled={loading}>
         {loading ? "Running…" : "Watch the budget stop a runaway loop"}
       </button>
 
@@ -51,13 +51,21 @@ export default function Home() {
       {result && (
         <div className="panel">
           <p className="summary">
-            {result.stoppedAtIteration !== null && (
-              <span className="stopped">
-                Hard-stopped at iteration {result.stoppedAtIteration}.{" "}
-              </span>
+            {result.stoppedAtIteration !== null ? (
+              <>
+                <span className="stopped">
+                  Hard-stopped at iteration {result.stoppedAtIteration}.{" "}
+                </span>
+                Spent ${result.spentUsd} of the ${result.ceilingUsd} ceiling, then the next
+                call was blocked. No API key, no account, no network.
+              </>
+            ) : (
+              <>
+                Ran {result.completedIterations} iterations and spent ${result.spentUsd} of
+                the ${result.ceilingUsd} ceiling without hitting it. No API key, no account,
+                no network.
+              </>
             )}
-            Spent ${result.spentUsd} of the ${result.ceilingUsd} ceiling, then the next
-            call was blocked. No API key, no account, no network.
           </p>
           <table>
             <thead>
