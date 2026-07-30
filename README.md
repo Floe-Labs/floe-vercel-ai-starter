@@ -10,6 +10,19 @@ The killer first impression takes under a minute and needs **no API key, no
 account, no network**: the homepage runs a runaway loop against a mock model and
 shows floe-guard hard-stopping it at a $0.10 ceiling.
 
+## Start building with Floe
+
+One key for your agent's whole vendor bill — LLM, voice, telephony, search, data — metered per call and budget-capped. Let your coding agent set it up, or wire it yourself:
+
+| Path | One line |
+|---|---|
+| **Agent** — Claude Code / Cursor does the setup | paste: `Read https://dev-dashboard.floelabs.xyz/agents.md and set up Floe for this project.` |
+| **Skill** — install the Floe agent skill | `npx skills add floe-labs/agent-skills` |
+| **MCP** — hosted MCP server (65 tools) | `npx -y add-mcp https://mcp.floelabs.xyz/mcp` |
+| **NPM** — the CLI + SDK | `npm i -g floe-agent` |
+
+New accounts get a **$3 Welcome Credit (300 API credits)** — no card. [Set up with your AI tools →](https://floe-labs.gitbook.io/docs/getting-started/setup-with-ai-tools) · [Get a key →](https://dev-dashboard.floelabs.xyz)
+
 ## Deploy
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/Floe-Labs/floe-vercel-ai-starter&env=OPENAI_API_KEY&envDescription=OpenAI%20API%20key%20for%20live%20chat%20%28the%20zero-key%20demo%20needs%20none%29&envLink=https://github.com/Floe-Labs/floe-vercel-ai-starter%23go-live)
