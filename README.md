@@ -90,7 +90,7 @@ This starter ships the **local** floe-guard. Be clear about what that means:
   *reads* your remaining budget to tighten the local ceiling; it does not enforce
   on Floe's side.
 - **Un-bypassable, cross-vendor enforcement** (caps that hold no matter which
-  process or vendor spends) is the hosted [Floe](https://floelabs.xyz?utm_source=floe-vercel-ai-starter&utm_medium=readme&utm_campaign=template)
+  process or vendor spends) is the hosted [Floe](https://floefinance.com?utm_source=floe-vercel-ai-starter&utm_medium=readme&utm_campaign=template)
   product.
 
 ## Configuration
