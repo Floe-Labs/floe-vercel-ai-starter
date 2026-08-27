@@ -1,6 +1,8 @@
 # floe-vercel-ai-starter
 
 [![guarded by floe-guard](https://img.shields.io/badge/guarded%20by-floe--guard-5b8cff)](https://github.com/Floe-Labs/floe-guard)
+[![CI](https://github.com/Floe-Labs/floe-vercel-ai-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/Floe-Labs/floe-vercel-ai-starter/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
 **A governed AI agent, ready to deploy.** A Vercel AI SDK chat agent whose spend
 is hard-capped by [floe-guard](https://github.com/Floe-Labs/floe-guard) out of
