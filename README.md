@@ -4,9 +4,10 @@
 [![CI](https://github.com/Floe-Labs/floe-vercel-ai-starter/actions/workflows/ci.yml/badge.svg)](https://github.com/Floe-Labs/floe-vercel-ai-starter/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 
-**A governed AI agent, ready to deploy.** A Vercel AI SDK chat agent whose spend
-is hard-capped by [floe-guard](https://github.com/Floe-Labs/floe-guard) out of
-the box. At 3 AM a runaway loop dies at **$1**, not **$4,000**.
+**Know what every call costs — then cap it.** A Vercel AI SDK chat agent that meters
+every call on one Floe ledger, so you see the real cost per session — with a
+[floe-guard](https://github.com/Floe-Labs/floe-guard) hard cap that stops the 3 AM
+runaway at **$1**, not **$4,000**.
 
 The killer first impression takes under a minute and needs **no API key, no
 account, no network**: the homepage runs a runaway loop against a mock model and
